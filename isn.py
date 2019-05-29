@@ -47,7 +47,15 @@ import demjson
 
 # print ("Time:",t)
 
+#代理部分
+proxies = {
+  "http":"http://127.0.0.1:1080",
+  "https":"https://127.0.0.1:1080"
+}
+
 s = requests.session()
+s.proxies = proxies
+
 s.headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1',
 }
@@ -62,7 +70,7 @@ s.headers = {
 #  search = "输入你要搜索的内容"  !!!!英文的话是小写无空格
 
 
-search = "peterrabbit"
+search = "funny"
 website = "http://www.instagram.com"
 
 
@@ -180,7 +188,7 @@ print (hnp,hashn)
 #                                                     \_/__/ 
 # 下面的设置为  pgn != -1时，将抓取所有结果，可能抓取到的结果十分庞大
 
-while hnp == True and pgn != 300:
+while hnp == True and pgn != 100:
     pgn = pgn + 1 
     url1 = website+"/graphql/query/?query_hash=298b92c8d7cad703f7565aa892ede943&variables=%7B%22tag_name%22%3A%22"+q+"%22%2C%22first%22%3A6%2C%22after%22%3A%22"+hashn+"%22%7D"
     print (url1)
