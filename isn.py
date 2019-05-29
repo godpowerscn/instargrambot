@@ -52,7 +52,6 @@ proxies = {
   "http":"http://127.0.0.1:1080",
   "https":"https://127.0.0.1:1080"
 }
-
 s = requests.session()
 s.proxies = proxies
 
@@ -72,11 +71,9 @@ s.headers = {
 
 search = "funny"
 website = "http://www.instagram.com"
-
-
 q = urllib.parse.quote(search)
-
 print (q)
+
 url1 = website+"/explore/tags/"+q+"/?__a=1"
 
 requests.adapters.DEFAULT_RETRIES = 5
