@@ -23,8 +23,8 @@ db = conn.mydb
 #结束定义mongodb连接
 #代理部分
 proxies = {
-  "http":"http://127.0.0.1:1080",
-  "https":"https://127.0.0.1:1080"
+  "http":"http://127.0.0.1:1087",
+  "https":"https://127.0.0.1:1087"
 }
 s = requests.session()
 s.proxies = proxies
@@ -99,6 +99,7 @@ def getMessage(keyword,maxpage):
         print("wrong")
       #print(url2)
       getnt['graphql']['shortcode_media']
+      print(getnt)
 
 
 
